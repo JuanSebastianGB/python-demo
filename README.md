@@ -25,16 +25,16 @@ This repository contains a **File Organizer** script that automatically organize
 
 ### Supported File Categories
 
-| Category | Extensions |
-|----------|------------|
-| **Images** | .jpg, .jpeg, .png, .gif, .bmp, .svg, .webp, .ico |
-| **Documents** | .pdf, .doc, .docx, .txt, .rtf, .odt, .xls, .xlsx, .ppt, .pptx |
-| **Videos** | .mp4, .avi, .mkv, .mov, .wmv, .flv, .webm, .m4v |
-| **Audio** | .mp3, .wav, .flac, .aac, .ogg, .m4a, .wma |
-| **Archives** | .zip, .rar, .7z, .tar, .gz, .bz2 |
-| **Code** | .py, .js, .html, .css, .java, .cpp, .c, .php, .rb, .go |
-| **Executables** | .exe, .msi, .deb, .rpm, .dmg, .app |
-| **Other** | Any file type not in the above categories |
+| Category        | Extensions                                                    |
+| --------------- | ------------------------------------------------------------- |
+| **Images**      | .jpg, .jpeg, .png, .gif, .bmp, .svg, .webp, .ico              |
+| **Documents**   | .pdf, .doc, .docx, .txt, .rtf, .odt, .xls, .xlsx, .ppt, .pptx |
+| **Videos**      | .mp4, .avi, .mkv, .mov, .wmv, .flv, .webm, .m4v               |
+| **Audio**       | .mp3, .wav, .flac, .aac, .ogg, .m4a, .wma                     |
+| **Archives**    | .zip, .rar, .7z, .tar, .gz, .bz2                              |
+| **Code**        | .py, .js, .html, .css, .java, .cpp, .c, .php, .rb, .go        |
+| **Executables** | .exe, .msi, .deb, .rpm, .dmg, .app                            |
+| **Other**       | Any file type not in the above categories                     |
 
 ## 🛠️ Installation
 
@@ -46,6 +46,7 @@ This repository contains a **File Organizer** script that automatically organize
 ### Setup
 
 1. **Clone the repository:**
+
    ```bash
    git clone https://github.com/JuanSebastianGB/python-demo.git
    cd python-demo
@@ -83,12 +84,12 @@ python file_organizer.py --help
 
 ### Command Line Options
 
-| Option | Description |
-|--------|-------------|
-| `directory` | Path to the directory to organize (required) |
-| `--dry-run` | Show what would be moved without actually moving files |
-| `--create-folders` | Create category folders without moving files |
-| `--help` | Show help message and exit |
+| Option             | Description                                            |
+| ------------------ | ------------------------------------------------------ |
+| `directory`        | Path to the directory to organize (required)           |
+| `--dry-run`        | Show what would be moved without actually moving files |
+| `--create-folders` | Create category folders without moving files           |
+| `--help`           | Show help message and exit                             |
 
 ## 💡 Examples
 
@@ -150,12 +151,14 @@ self.file_extensions = {
 ### Manual Testing
 
 1. **Create a test directory with various file types:**
+
    ```bash
    mkdir test_files
    # Add some files with different extensions
    ```
 
 2. **Run dry-run to see what would happen:**
+
    ```bash
    python file_organizer.py test_files --dry-run
    ```
@@ -197,8 +200,9 @@ This project is open source and available under the [MIT License](LICENSE).
 ## 👨‍💻 Author
 
 **Juan Sebastian Gonzalez**
+
 - GitHub: [@JuanSebastianGB](https://github.com/JuanSebastianGB)
-- Email: juan.sebastian.gonzalez@southerncode.us
+- Email: jsebastiangb.12@gmail.com
 
 ## 🙏 Acknowledgments
 
