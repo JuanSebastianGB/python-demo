@@ -37,7 +37,7 @@ def sample_files():
 @pytest.fixture
 def organizer_with_files(temp_directory, sample_files):
     """Create FileOrganizer with sample files."""
-    from file_organizer import FileOrganizer
+    from file_organizer.file_organizer import FileOrganizer
     
     # Create sample files
     for filename in sample_files.keys():

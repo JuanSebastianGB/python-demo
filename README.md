@@ -1,6 +1,11 @@
-# 🐍 Python Demo Repository
+# 📁 File Organizer
 
-A demonstration repository showcasing Python programming concepts and best practices. This repository contains a practical file organizer script that demonstrates object-oriented programming, command-line interfaces, and file system operations.
+[![Python Version](https://img.shields.io/badge/python-3.8%2B-blue.svg)](https://www.python.org/downloads/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+[![Tests](https://github.com/JuanSebastianGB/python-demo/workflows/Tests/badge.svg)](https://github.com/JuanSebastianGB/python-demo/actions)
+
+A professional Python package for organizing files by their extensions into categorized folders. This package demonstrates modern Python development practices including proper project structure, comprehensive testing, and professional tooling.
 
 ## 📁 Project Overview
 
@@ -40,45 +45,76 @@ This repository contains a **File Organizer** script that automatically organize
 
 ### Prerequisites
 
-- Python 3.6 or higher
+- Python 3.8 or higher
 - No external dependencies required (uses only Python standard library)
 
-### Setup
+### Quick Installation
 
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/JuanSebastianGB/python-demo.git
-   cd python-demo
-   ```
+```bash
+# Install from source
+git clone https://github.com/JuanSebastianGB/python-demo.git
+cd python-demo
+pip install -e .
 
-2. **Make the script executable (optional):**
-   ```bash
-   chmod +x file_organizer.py
-   ```
+# Or install with development dependencies
+pip install -e ".[dev]"
+```
+
+### Development Setup
+
+```bash
+# Clone the repository
+git clone https://github.com/JuanSebastianGB/python-demo.git
+cd python-demo
+
+# Install in development mode
+pip install -e ".[dev]"
+
+# Run tests to verify installation
+make test
+```
 
 ## 📖 Usage
 
 ### Basic Usage
 
 ```bash
-# Organize files in the current directory
-python file_organizer.py /path/to/directory
+# Organize files in a directory
+file-organizer /path/to/directory
 
 # Organize files in the current directory
-python file_organizer.py .
+file-organizer .
 ```
 
 ### Advanced Usage
 
 ```bash
 # Preview what would be moved (dry run)
-python file_organizer.py /path/to/directory --dry-run
+file-organizer /path/to/directory --dry-run
 
 # Create category folders without moving files
-python file_organizer.py /path/to/directory --create-folders
+file-organizer /path/to/directory --create-folders
 
 # Get help
-python file_organizer.py --help
+file-organizer --help
+
+# Check version
+file-organizer --version
+```
+
+### Programmatic Usage
+
+```python
+from file_organizer import FileOrganizer
+
+# Create organizer instance
+organizer = FileOrganizer("/path/to/directory")
+
+# Organize files
+result = organizer.organize_files()
+
+# Print summary
+organizer.print_summary(result)
 ```
 
 ### Command Line Options
@@ -120,6 +156,61 @@ python-demo/
 ```
 
 ## 🔧 Development
+
+### Project Structure
+
+```
+python-demo/
+├── src/
+│   └── file_organizer/
+│       ├── __init__.py
+│       ├── file_organizer.py
+│       └── cli.py
+├── tests/
+│   ├── __init__.py
+│   ├── conftest.py
+│   ├── test_file_organizer_unit.py
+│   └── test_file_organizer_integration.py
+├── docs/
+│   ├── README.md
+│   └── installation.md
+├── scripts/
+│   └── run_tests.py
+├── .github/
+│   └── workflows/
+│       └── ci.yml
+├── setup.py
+├── pyproject.toml
+├── Makefile
+├── LICENSE
+├── CHANGELOG.md
+└── README.md
+```
+
+### Development Commands
+
+```bash
+# Install development dependencies
+make install-dev
+
+# Run tests
+make test
+
+# Run tests with coverage
+make test-cov
+
+# Run linting
+make lint
+
+# Format code
+make format
+
+# Run all quality checks
+make quality
+
+# Clean build artifacts
+make clean
+```
 
 ### Code Structure
 

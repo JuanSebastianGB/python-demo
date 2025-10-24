@@ -9,7 +9,7 @@ import pytest
 import tempfile
 import shutil
 from pathlib import Path
-from file_organizer import FileOrganizer
+from file_organizer.file_organizer import FileOrganizer
 
 
 @pytest.mark.integration

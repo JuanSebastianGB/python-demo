@@ -11,7 +11,7 @@ from unittest.mock import Mock, patch, MagicMock
 import tempfile
 import shutil
 
-from file_organizer import FileOrganizer
+from file_organizer.file_organizer import FileOrganizer
 
 
 class TestFileOrganizerUnit:
