@@ -27,7 +27,7 @@ class FileOrganizer:
             directory (str): The directory path to organize
         """
         self.directory = Path(directory)
-        self.file_extensions = {
+        self._file_extensions = {
             'Images': ['.jpg', '.jpeg', '.png', '.gif', '.bmp', '.svg', '.webp', '.ico'],
             'Documents': ['.pdf', '.doc', '.docx', '.txt', '.rtf', '.odt', '.xls', '.xlsx', '.ppt', '.pptx'],
             'Videos': ['.mp4', '.avi', '.mkv', '.mov', '.wmv', '.flv', '.webm', '.m4v'],
@@ -36,6 +36,11 @@ class FileOrganizer:
             'Code': ['.py', '.js', '.html', '.css', '.java', '.cpp', '.c', '.php', '.rb', '.go'],
             'Executables': ['.exe', '.msi', '.deb', '.rpm', '.dmg', '.app']
         }
+    
+    @property
+    def file_extensions(self):
+        """Return a copy of the file extensions dictionary."""
+        return {k: v.copy() for k, v in self._file_extensions.items()}
     
     def get_file_extension(self, file_path: Path) -> str:
         """
@@ -61,7 +66,7 @@ class FileOrganizer:
         """
         extension = self.get_file_extension(file_path)
         
-        for category, extensions in self.file_extensions.items():
+        for category, extensions in self._file_extensions.items():
             if extension in extensions:
                 return category
         
@@ -69,7 +74,7 @@ class FileOrganizer:
     
     def create_category_folders(self) -> None:
         """Create folders for each file category."""
-        categories = list(self.file_extensions.keys()) + ['Other']
+        categories = list(self._file_extensions.keys()) + ['Other']
         
         for category in categories:
             folder_path = self.directory / category
@@ -89,7 +94,7 @@ class FileOrganizer:
         if not self.directory.exists():
             raise FileNotFoundError(f"Directory {self.directory} does not exist")
         
-        moved_files = {category: [] for category in list(self.file_extensions.keys()) + ['Other']}
+        moved_files = {category: [] for category in list(self._file_extensions.keys()) + ['Other']}
         
         # Get all files in the directory (not subdirectories)
         files = [f for f in self.directory.iterdir() if f.is_file()]
@@ -99,6 +104,10 @@ class FileOrganizer:
             return moved_files
         
         print(f"Found {len(files)} files to organize...")
+        
+        # Create category folders first (only if not dry run)
+        if not dry_run:
+            self.create_category_folders()
         
         for file_path in files:
             category = self.categorize_file(file_path)
