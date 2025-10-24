@@ -38,16 +38,16 @@ File Organizer is a Python package that automatically organizes files by their e
 
 ### Supported File Categories
 
-| Category | Extensions |
-|----------|------------|
-| **Images** | .jpg, .jpeg, .png, .gif, .bmp, .svg, .webp, .ico |
-| **Documents** | .pdf, .doc, .docx, .txt, .rtf, .odt, .xls, .xlsx, .ppt, .pptx |
-| **Videos** | .mp4, .avi, .mkv, .mov, .wmv, .flv, .webm, .m4v |
-| **Audio** | .mp3, .wav, .flac, .aac, .ogg, .m4a, .wma |
-| **Archives** | .zip, .rar, .7z, .tar, .gz, .bz2 |
-| **Code** | .py, .js, .html, .css, .java, .cpp, .c, .php, .rb, .go |
-| **Executables** | .exe, .msi, .deb, .rpm, .dmg, .app |
-| **Other** | Any file type not in the above categories |
+| Category        | Extensions                                                    |
+| --------------- | ------------------------------------------------------------- |
+| **Images**      | .jpg, .jpeg, .png, .gif, .bmp, .svg, .webp, .ico              |
+| **Documents**   | .pdf, .doc, .docx, .txt, .rtf, .odt, .xls, .xlsx, .ppt, .pptx |
+| **Videos**      | .mp4, .avi, .mkv, .mov, .wmv, .flv, .webm, .m4v               |
+| **Audio**       | .mp3, .wav, .flac, .aac, .ogg, .m4a, .wma                     |
+| **Archives**    | .zip, .rar, .7z, .tar, .gz, .bz2                              |
+| **Code**        | .py, .js, .html, .css, .java, .cpp, .c, .php, .rb, .go        |
+| **Executables** | .exe, .msi, .deb, .rpm, .dmg, .app                            |
+| **Other**       | Any file type not in the above categories                     |
 
 ## 🔧 Installation
 
