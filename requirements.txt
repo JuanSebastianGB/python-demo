@@ -1,0 +1,7 @@
+# File Organizer Dependencies
+# No external dependencies required - uses only Python standard library
+
+# Optional: For enhanced functionality
+# pathlib2>=2.3.0  # For Python < 3.4 compatibility
+# click>=8.0.0     # For enhanced CLI interface
+# colorama>=0.4.0  # For colored terminal output
