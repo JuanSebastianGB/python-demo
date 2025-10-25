@@ -198,7 +198,7 @@ This project is open source and available under the [MIT License](LICENSE).
 
 **Juan Sebastian Gonzalez**
 - GitHub: [@JuanSebastianGB](https://github.com/JuanSebastianGB)
-- Email: juan.sebastian.gonzalez@southerncode.us
+- Email: jsebastiangb.12@gmail.com
 
 ## 🙏 Acknowledgments
 
