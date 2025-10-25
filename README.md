@@ -212,8 +212,6 @@ This project is open source and available under the [MIT License](LICENSE).
 - **Dependencies**: None (uses only standard library)
 - **Lines of Code**: ~200
 - **File Size**: ~6KB
-- **Last Updated**: January 2025
-
 ---
 
 **⭐ If you find this project useful, please give it a star!**
